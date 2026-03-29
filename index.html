@@ -3,30 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prototipo de TP - Datos Personales</title>
+  <title>TP Datos Personales - Registro de Agua</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
+  <header class="header">
+    <h1 class="main-title">TP Datos Personales</h1>
+    <p class="subtitle">Análisis de Registro de Consumo de Agua</p>
+  </header>
+
+  <main class="container">
     
-    <h1>¿Cuánta Agua tomé todos los días? (RawGraphs)</h1>
-    <div class="chart-wrapper">
-      <object type="image/svg+xml" data="RawGraphs.svg"></object>
-    </div>
-
-    <h1>¿Cuándo fueron los contextos donde más se tomó agua? (flourish)</h1>
-    <div class="chart-wrapper">
-      <div class="flourish-embed flourish-chart" data-src="visualisation/28278318" style="width: 100%;">
-        <script src="https://public.flourish.studio/resources/embed.js"></script>
-        <noscript>
-          <img src="https://public.flourish.studio/visualisation/28278318/thumbnail" width="100%" alt="visualization" />
-        </noscript>
+    <section class="chart-section">
+      <h2>¿Cuánta agua tomé todos los días?</h2>
+      <p class="chart-desc">Visualización generada con RawGraphs</p>
+      
+      <div class="chart-wrapper">
+        <object type="image/svg+xml" data="RawGraphs.svg"></object>
       </div>
-    </div>
+    </section>
 
-  </div>
+    <section class="chart-section">
+      <h2>¿Cuáles fueron los contextos donde más se tomó agua?</h2>
+      <p class="chart-desc">Visualización interactiva generada con Flourish</p>
+      
+      <div class="chart-wrapper">
+        <div class="flourish-embed flourish-chart" data-src="visualisation/28278318" style="width: 100%;">
+          <script src="https://public.flourish.studio/resources/embed.js"></script>
+          <noscript>
+            <img src="https://public.flourish.studio/visualisation/28278318/thumbnail" width="100%" alt="visualization" />
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
 </body>
 </html>

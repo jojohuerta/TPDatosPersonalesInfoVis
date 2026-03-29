@@ -1,52 +1,100 @@
 :root {
-  --bg-color: #f0f2f5;
+  --bg-color: #f8fafc;
   --card-bg: #ffffff;
-  --text-color: #333333;
-  --title-color: #2c3e50;
+  --text-main: #334155;
+  --text-muted: #64748b; 
+  --accent-color: #0ea5e9; 
+  --border-color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
-  color: var(--text-color);
+  color: var(--text-main);
   margin: 0;
-  padding: 2rem 1rem;
+  padding: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.6;
+}
+
+/* --- ESTILOS DEL ENCABEZADO --- */
+.header {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+  width: 100%;
+  background: linear-gradient(to bottom, #e0f2fe, var(--bg-color));
+  margin-bottom: 2rem;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -1.5px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-top: 0.5rem;
 }
 
 .container {
   width: 100%;
-  max-width: 900px;
+  max-width: 950px;
+  padding: 0 1.5rem 4rem;
+}
+
+
+.chart-section {
   background-color: var(--card-bg);
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--border-color);
+  margin-bottom: 3rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-h1 {
-  color: var(--title-color);
+/* Efecto hover interactivo */
+.chart-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+.chart-section h2 {
   font-size: 1.5rem;
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #e9ecef;
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 0;
+  margin-bottom: 0.2rem;
 }
 
-h1:first-child {
-  margin-top: 0;
+.chart-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
 }
 
 .chart-wrapper {
   width: 100%;
-  margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 object {
   width: 100%;
-  max-height: 500px;
+  max-height: 550px;
   display: block;
 }
