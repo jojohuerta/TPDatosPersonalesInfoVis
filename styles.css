@@ -1,19 +1,16 @@
 :root {
-  --bg-color: #f8fafc;
-  --card-bg: #ffffff;
-  --text-main: #334155;
-  --text-muted: #64748b; 
-  --accent-color: #0ea5e9; 
-  --border-color: #e2e8f0;
+  --text-main: #1e293b;
+  --text-muted: #475569;
+  --accent-color: #0284c7;
 }
 
 * {
   box-sizing: border-box;
 }
 
+/* Fondo animado fluido */
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--bg-color);
   color: var(--text-main);
   margin: 0;
   padding: 0;
@@ -21,15 +18,22 @@ body {
   flex-direction: column;
   align-items: center;
   line-height: 1.6;
+  
+  background: linear-gradient(-45deg, #e0f2fe, #f8fafc, #bae6fd, #f1f5f9);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
 }
 
-/* --- ESTILOS DEL ENCABEZADO --- */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .header {
   text-align: center;
-  padding: 4rem 1rem 3rem;
+  padding: 4rem 1rem 2rem;
   width: 100%;
-  background: linear-gradient(to bottom, #e0f2fe, var(--bg-color));
-  margin-bottom: 2rem;
 }
 
 .main-title {
@@ -53,21 +57,35 @@ body {
   padding: 0 1.5rem 4rem;
 }
 
-
-.chart-section {
-  background-color: var(--card-bg);
-  padding: 3rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  border: 1px solid var(--border-color);
-  margin-bottom: 3rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* Introducción */
+.intro {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 3.5rem;
+  border-left: 5px solid var(--accent-color);
+  font-size: 1.1rem;
+  color: #334155;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
 
-/* Efecto hover interactivo */
+/* Tarjetas Glassmorphism */
+.chart-section {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  margin-bottom: 3.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .chart-section:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.12);
 }
 
 .chart-section h2 {
@@ -82,19 +100,57 @@ body {
   color: var(--text-muted);
   font-size: 0.95rem;
   margin-bottom: 2.5rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   padding-bottom: 1rem;
 }
 
+/* Ajustes de contenedores de gráficos */
 .chart-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: visible;
 }
 
-object {
+.flourish-embed {
   width: 100%;
-  max-height: 550px;
-  display: block;
+  overflow: visible !important;
+}
+
+.flourish-fallback {
+  width: 100%;
+}
+
+/* Estilos para el gráfico estático (PNG) */
+.chart-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilos de la Leyenda */
+.legend-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.legend-item {
+  margin-left: 15px;
+}
+
+.legend-black {
+  color: #000;
+  font-weight: 700;
+}
+
+.legend-blue {
+  color: #1e3a8a;
+  font-weight: 700;
 }
