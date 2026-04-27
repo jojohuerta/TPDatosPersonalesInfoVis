@@ -34,15 +34,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.8455487"
-     inkscape:cx="410.44704"
-     inkscape:cy="136.27384"
+     inkscape:zoom="1.305"
+     inkscape:cx="342.14559"
+     inkscape:cy="277.01149"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg41" />
+     inkscape:current-layer="viz" />
   <rect
      width="805"
      height="600"
@@ -834,8 +834,8 @@
           <g
              class="tick"
              opacity="1"
-             transform="translate(0,0)"
-             id="g39">
+             id="g39"
+             transform="translate(0,0)">
             <line
                stroke="currentColor"
                x2="-6"
@@ -877,7 +877,14 @@
          transform="translate(-4.8765985,7.5858199)"><tspan
            x="392.83789"
            y="220.64132"
-           id="tspan1">Recomendado por la OMS</tspan></text>
+           id="tspan2">Recomendado por la OMS</tspan></text>
     </g>
+    <rect
+       style="fill:#000000"
+       id="rect1"
+       width="676.22168"
+       height="2.7092214"
+       x="79.651108"
+       y="229.74197" />
   </g>
 </svg>
